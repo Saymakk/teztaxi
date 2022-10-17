@@ -39,14 +39,22 @@ class _AuthScreenState extends State<AuthScreen> {
                   width: 95,
                   height: 24,
                   child: DropdownButton<String>(
+                    style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                      color: Color(0xff8A8D9F),
+                      fontSize: 16,
+                    )),
                     value: current_lang,
-                    icon: Icon(Icons.keyboard_arrow_down_sharp),
+                    icon: Icon(
+                      Icons.keyboard_arrow_down_sharp,
+                      color: Color(0xff8A8D9F),
+                    ),
                     underline: Container(
                       height: 0,
                     ),
                     // elevation: 20,
                     // style:  TextStyle(color: Colors.deepPurple),
-                    alignment: Alignment.centerLeft,
+                    alignment: Alignment.center,
                     isExpanded: true,
                     onChanged: (String? value) {
                       // This is called when the user selects an item.
