@@ -1,6 +1,8 @@
 import 'package:easy_mask/easy_mask.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:teztaxi/constants/bottom_app_bar.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({Key? key}) : super(key: key);
@@ -151,20 +153,23 @@ class _AuthScreenState extends State<AuthScreen> {
                           keyboardType: TextInputType.number,
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(bottom: 20),
-                        height: 50,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                            color: Color(0xffFFE14D),
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Center(
-                            child: Text(
-                          'Войти',
-                          style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                                  fontWeight: FontWeight.w600, fontSize: 16)),
-                        )),
+                      GestureDetector(
+                        onTap: () => Get.offAll(() => BottomNav()),
+                        child: Container(
+                          margin: EdgeInsets.only(bottom: 20),
+                          height: 50,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                              color: Color(0xffFFE14D),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Center(
+                              child: Text(
+                            'Войти',
+                            style: GoogleFonts.poppins(
+                                textStyle: TextStyle(
+                                    fontWeight: FontWeight.w600, fontSize: 16)),
+                          )),
+                        ),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
