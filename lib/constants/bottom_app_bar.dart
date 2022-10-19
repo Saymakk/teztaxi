@@ -44,7 +44,7 @@ class _BottomNavState extends State<BottomNav> {
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0.0,
         backgroundColor: Colors.white,
-        iconSize: 31,
+        iconSize: 25,
         type: BottomNavigationBarType.fixed,
         selectedFontSize: 0,
         selectedLabelStyle: GoogleFonts.poppins(
