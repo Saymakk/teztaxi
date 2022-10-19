@@ -38,7 +38,7 @@ class _MainScreenState extends State<MainScreen> {
                                 height: 1.3)),
                       )),
                       Text(
-                        'Смотреть всё',
+                        'Смотреть все',
                         style: GoogleFonts.poppins(
                             textStyle: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -383,7 +383,10 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 24, right: 24),
+                  padding: EdgeInsets.only(
+                    left: 24,
+                    right: 24,
+                  ),
                   child: Column(
                     children: [
                       Padding(
@@ -410,49 +413,359 @@ class _MainScreenState extends State<MainScreen> {
                         ),
                       ),
                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
                             children: [
                               Container(
+                                padding: EdgeInsets.only(
+                                    top: 45, bottom: 25, left: 35, right: 35),
+                                margin: EdgeInsets.only(bottom: 20),
                                 decoration: BoxDecoration(
                                     color: Color(0xffFFE14D),
                                     borderRadius: BorderRadius.circular(15)),
                                 child: Container(
-                                  margin: EdgeInsets.only(
-                                      top: 45, bottom: 29, left: 38, right: 38),
                                   child: Center(
                                     child: Column(
                                       children: [
-                                        Text('2.000',
+                                        Text(
+                                          '2.000',
                                           style: GoogleFonts.poppins(
                                             textStyle: TextStyle(
                                                 fontSize: 26,
                                                 fontWeight: FontWeight.w600,
                                                 color: Color(0xff100C27),
                                                 height: 1.3),
-                                          ),),
-                                        Container(margin: EdgeInsets.only(top: 5),
-                                            width: 90,
-                                            child: Text('Оплата по долгам', textAlign: TextAlign.center,
-                                                style: GoogleFonts.poppins(
+                                          ),
+                                        ),
+                                        Container(
+                                            margin: EdgeInsets.only(top: 5),
+                                            width: 82,
+                                            child: Text(
+                                              'Оплата по долгам',
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.poppins(
                                                 textStyle: TextStyle(
-                                                fontSize: 16,
-                                                // fontWeight: FontWeight.w600,
+                                                    fontSize: 16,
+                                                    // fontWeight: FontWeight.w600,
+                                                    color: Color(0xff100C27),
+                                                    height: 1.3),
+                                              ),
+                                            )),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(
+                                    top: 30, bottom: 20, left: 30, right: 30),
+                                decoration: BoxDecoration(
+                                    color: Color(0xffFFE14D),
+                                    borderRadius: BorderRadius.circular(15)),
+                                child: Container(
+                                  child: Center(
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          '10.000',
+                                          style: GoogleFonts.poppins(
+                                            textStyle: TextStyle(
+                                                fontSize: 26,
+                                                fontWeight: FontWeight.w600,
                                                 color: Color(0xff100C27),
-                                            height: 1.3),
-                                  ),)),
+                                                height: 1.3),
+                                          ),
+                                        ),
+                                        Container(
+                                            margin: EdgeInsets.only(top: 5),
+                                            // width: 97,
+                                            child: Text(
+                                              'Общий долг',
+                                              // textAlign: TextAlign.center,
+                                              style: GoogleFonts.poppins(
+                                                textStyle: TextStyle(
+                                                    fontSize: 16,
+                                                    // fontWeight: FontWeight.w600,
+                                                    color: Color(0xff100C27),
+                                                    height: 1.3),
+                                              ),
+                                            )),
                                       ],
                                     ),
                                   ),
                                 ),
                               ),
                             ],
-                          )
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(bottom: 20),
+                                padding: EdgeInsets.only(
+                                    top: 30, bottom: 20, left: 30, right: 30),
+                                decoration: BoxDecoration(
+                                    color: Color(0xffFFE14D),
+                                    borderRadius: BorderRadius.circular(15)),
+                                child: Container(
+                                  child: Center(
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          '11.500',
+                                          style: GoogleFonts.poppins(
+                                            textStyle: TextStyle(
+                                                fontSize: 26,
+                                                fontWeight: FontWeight.w600,
+                                                color: Color(0xff100C27),
+                                                height: 1.3),
+                                          ),
+                                        ),
+                                        Container(
+                                            margin: EdgeInsets.only(top: 5),
+                                            // width: 97,
+                                            child: Text(
+                                              'Аренда',
+                                              // textAlign: TextAlign.center,
+                                              style: GoogleFonts.poppins(
+                                                textStyle: TextStyle(
+                                                    fontSize: 16,
+                                                    // fontWeight: FontWeight.w600,
+                                                    color: Color(0xff100C27),
+                                                    height: 1.3),
+                                              ),
+                                            )),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(
+                                    top: 45, bottom: 25, left: 35, right: 35),
+                                margin: EdgeInsets.only(bottom: 20),
+                                decoration: BoxDecoration(
+                                    color: Color(0xffFFE14D),
+                                    borderRadius: BorderRadius.circular(15)),
+                                child: Container(
+                                  child: Center(
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          '1 день',
+                                          style: GoogleFonts.poppins(
+                                            textStyle: TextStyle(
+                                                fontSize: 26,
+                                                fontWeight: FontWeight.w600,
+                                                color: Color(0xff100C27),
+                                                height: 1.3),
+                                          ),
+                                        ),
+                                        Container(
+                                            margin: EdgeInsets.only(top: 5),
+                                            width: 82,
+                                            child: Text(
+                                              'Срок путевого листа',
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.poppins(
+                                                textStyle: TextStyle(
+                                                    fontSize: 16,
+                                                    // fontWeight: FontWeight.w600,
+                                                    color: Color(0xff100C27),
+                                                    height: 1.3),
+                                              ),
+                                            )),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ],
                   ),
-                )
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      bottom: 20, left: 24, right: 24, top: 20),
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: Text(
+                        'Акции',
+                        style: GoogleFonts.poppins(
+                            textStyle: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 28,
+                                color: Color(0xff100C27),
+                                height: 1.3)),
+                      )),
+                      Text(
+                        'Смотреть все',
+                        style: GoogleFonts.poppins(
+                            textStyle: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 13,
+                                color: Color(0xff8F919C),
+                                height: 1.3)),
+                      )
+                    ],
+                  ),
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Container(
+                    margin: EdgeInsets.only(bottom: 44),
+                    transform: Matrix4.translationValues(24.0, 0.0, 0.0),
+                    child: Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: 247,
+                              height: 150,
+                              margin: EdgeInsets.only(right: 18.5, bottom: 15),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Stack(
+                                children: [
+                                  Image.asset(
+                                    'assets/images/ex1.png',
+                                    fit: BoxFit.fill,
+                                  ),
+                                  Positioned(
+                                    top: 15,
+                                    left: 15,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(5),
+                                          color: Colors.white),
+                                      child: Center(
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 5,
+                                              top: 3,
+                                              right: 5,
+                                              bottom: 3),
+                                          child: Text(
+                                            'Ремонт',
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 9,
+                                                fontWeight: FontWeight.w600,
+                                                color: Color(0xff100c27)),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 5),
+                              child: Text(
+                                'Успей! Только 3 дня',
+                                style: GoogleFonts.poppins(
+                                  textStyle: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                      color: Color(0xff100c27),
+                                      height: 1.3),
+                                ),
+                              ),
+                            ),
+                            Text(
+                              'Супер акция для замены шин',
+                              style: GoogleFonts.poppins(
+                                textStyle: TextStyle(
+                                    fontSize: 13,
+                                    // fontWeight: FontWeight.w600,
+                                    color: Color(0xff8F919C),
+                                    height: 1.3),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: 247,
+                              height: 150,
+                              margin: EdgeInsets.only(right: 18.5, bottom: 15),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Stack(
+                                children: [
+                                  Image.asset(
+                                    'assets/images/ex1.png',
+                                    fit: BoxFit.fill,
+                                  ),
+                                  Positioned(
+                                    top: 15,
+                                    left: 15,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(5),
+                                          color: Colors.white),
+                                      child: Center(
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 5,
+                                              top: 3,
+                                              right: 5,
+                                              bottom: 3),
+                                          child: Text(
+                                            'Рубрика',
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 9,
+                                                fontWeight: FontWeight.w600,
+                                                color: Color(0xff100c27)),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 5),
+                              child: Text(
+                                'Не упусти свой шанс',
+                                style: GoogleFonts.poppins(
+                                  textStyle: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                      color: Color(0xff100c27),
+                                      height: 1.3),
+                                ),
+                              ),
+                            ),
+                            Text(
+                              'К нам поступило много предложений',
+                              style: GoogleFonts.poppins(
+                                textStyle: TextStyle(
+                                    fontSize: 13,
+                                    // fontWeight: FontWeight.w600,
+                                    color: Color(0xff8F919C),
+                                    height: 1.3),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
