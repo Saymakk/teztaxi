@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:teztaxi/screens/main_screen/main_screen.dart';
 
@@ -32,13 +33,7 @@ class _BottomNavState extends State<BottomNav> {
     });
   }
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-        overlays: [SystemUiOverlay.top]);
-    super.initState();
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -55,60 +50,44 @@ class _BottomNavState extends State<BottomNav> {
             textStyle: TextStyle(fontSize: 9)),
         unselectedLabelStyle: GoogleFonts.poppins(
             textStyle: TextStyle(fontSize: 9)),
-        // unselectedItemColor: Const.icongrey,
-        // selectedItemColor: Const.turq,
-        // showSelectedLabels: true,
-        // showUnselectedLabels: true,
+        unselectedItemColor: Colors.grey,
+        selectedItemColor: Colors.black,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage('assets/icons/main_page_icon.png'),
-              // color: Const.icongrey,
-              // size: 32,
             ),
             activeIcon: ImageIcon(
               AssetImage('assets/icons/main_page_icon.png'),
-              // color: Const.turq,
-              // size: 32,
             ),
             label: 'Главная',
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage('assets/icons/calendar_icon.png'),
-              // color: Const.icongrey,
-              // size: 32,
             ),
             activeIcon: ImageIcon(
               AssetImage( 'assets/icons/calendar_icon.png'),
-              // color: Const.turq,
-              // size: 32,
             ),
             label: 'Аренда',
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage('assets/icons/notifications_icon.png'),
-              // color: Const.icongrey,
-              // size: 32,
             ),
             activeIcon: ImageIcon(
               AssetImage('assets/icons/notifications_icon.png'),
-              // color: Const.turq,
-              // size: 32,
             ),
             label: 'Уведомления',
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage('assets/icons/profile_icon.png'),
-              // color: Const.icongrey,
-              // size: 32,
             ),
             activeIcon: ImageIcon(
               AssetImage('assets/icons/profile_icon.png'),
-              // color: Const.turq,
-              // size: 32,
             ),
             label: 'Профиль',
           ),
