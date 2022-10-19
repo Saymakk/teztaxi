@@ -296,37 +296,46 @@ class _MainScreenState extends State<MainScreen> {
                       child: (Row(
                         children: [
                           Expanded(
-                            child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(bottom: 5),
-                                  child: Text('Kaspi баланс',
+                                  child: Text(
+                                    'Kaspi баланс',
                                     style: GoogleFonts.poppins(
                                       textStyle: TextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.w300,
                                           color: Color(0xff100C27),
                                           height: 1.3),
-                                    ),),
-                                ),
-                                Text('15.200,25 ₸',
-                                  style: TextStyle(
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.w500,
-                                        color: Color(0xff100C27),
-                                        height: 1.2),
+                                    ),
                                   ),
+                                ),
+                                Text(
+                                  '15.200,25 ₸',
+                                  style: TextStyle(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.w500,
+                                      color: Color(0xff100C27),
+                                      height: 1.2),
+                                ),
                               ],
                             ),
                           ),
-                          Image.asset('assets/images/kaspi.png', width: 118, height: 45,)
+                          Image.asset(
+                            'assets/images/kaspi.png',
+                            width: 118,
+                            height: 45,
+                          )
                         ],
                       )),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 24, right: 24, top: 22, bottom: 40),
+                  padding: const EdgeInsets.only(
+                      left: 24, right: 24, top: 22, bottom: 40),
                   child: Container(
                     decoration: BoxDecoration(
                         color: Color(0xffF4F5F7),
@@ -336,35 +345,114 @@ class _MainScreenState extends State<MainScreen> {
                       child: (Row(
                         children: [
                           Expanded(
-                            child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(bottom: 5),
-                                  child: Text('Яндекс баланс',
+                                  child: Text(
+                                    'Яндекс баланс',
                                     style: GoogleFonts.poppins(
                                       textStyle: TextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.w300,
                                           color: Color(0xff100C27),
                                           height: 1.3),
-                                    ),),
-                                ),
-                                Text('10.600,84 ₸',
-                                  style: TextStyle(
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.w500,
-                                        color: Color(0xff100C27),
-                                        height: 1.2),
+                                    ),
                                   ),
+                                ),
+                                Text(
+                                  '10.600,84 ₸',
+                                  style: TextStyle(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.w500,
+                                      color: Color(0xff100C27),
+                                      height: 1.2),
+                                ),
                               ],
                             ),
                           ),
-                          Image.asset('assets/images/yandex.png', width: 118, height: 73,)
+                          Image.asset(
+                            'assets/images/yandex.png',
+                            width: 118,
+                            height: 73,
+                          )
                         ],
                       )),
                     ),
                   ),
                 ),
+                Padding(
+                  padding: EdgeInsets.only(left: 24, right: 24),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 20),
+                        child: Row(
+                          children: [
+                            Expanded(
+                                child: Text(
+                              'На сегодня',
+                              style: GoogleFonts.poppins(
+                                textStyle: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                    color: Color(0xff100C27),
+                                    height: 1.3),
+                              ),
+                            )),
+                            Image.asset(
+                              'assets/icons/open_turq.png',
+                              width: 30,
+                              height: 30,
+                            )
+                          ],
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Color(0xffFFE14D),
+                                    borderRadius: BorderRadius.circular(15)),
+                                child: Container(
+                                  margin: EdgeInsets.only(
+                                      top: 45, bottom: 29, left: 38, right: 38),
+                                  child: Center(
+                                    child: Column(
+                                      children: [
+                                        Text('2.000',
+                                          style: GoogleFonts.poppins(
+                                            textStyle: TextStyle(
+                                                fontSize: 26,
+                                                fontWeight: FontWeight.w600,
+                                                color: Color(0xff100C27),
+                                                height: 1.3),
+                                          ),),
+                                        Container(margin: EdgeInsets.only(top: 5),
+                                            width: 90,
+                                            child: Text('Оплата по долгам', textAlign: TextAlign.center,
+                                                style: GoogleFonts.poppins(
+                                                textStyle: TextStyle(
+                                                fontSize: 16,
+                                                // fontWeight: FontWeight.w600,
+                                                color: Color(0xff100C27),
+                                            height: 1.3),
+                                  ),)),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
