@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fluttericon/linecons_icons.dart';
+import 'package:fluttericon/typicons_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:teztaxi/screens/main_screen/main_screen.dart';
 
@@ -44,12 +46,11 @@ class _BottomNavState extends State<BottomNav> {
         backgroundColor: Colors.white,
         iconSize: 31,
         type: BottomNavigationBarType.fixed,
-
-        // selectedFontSize: 0,
+        selectedFontSize: 0,
         selectedLabelStyle: GoogleFonts.poppins(
-            textStyle: TextStyle(fontSize: 9)),
+            textStyle: TextStyle(fontSize: 10)),
         unselectedLabelStyle: GoogleFonts.poppins(
-            textStyle: TextStyle(fontSize: 9)),
+            textStyle: TextStyle(fontSize: 10)),
         unselectedItemColor: Colors.grey,
         selectedItemColor: Colors.black,
         showSelectedLabels: true,
@@ -57,7 +58,7 @@ class _BottomNavState extends State<BottomNav> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: ImageIcon(
-              AssetImage('assets/icons/main_page_icon.png'),
+              AssetImage('assets/icons/main_page_icon.png',),
             ),
             activeIcon: ImageIcon(
               AssetImage('assets/icons/main_page_icon.png'),
