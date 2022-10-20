@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:teztaxi/screens/news/all_news_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -37,14 +38,19 @@ class _MainScreenState extends State<MainScreen> {
                                 color: Color(0xff100C27),
                                 height: 1.3)),
                       )),
-                      Text(
-                        'Смотреть все',
-                        style: GoogleFonts.poppins(
-                            textStyle: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 13,
-                                color: Color(0xff8F919C),
-                                height: 1.3)),
+                      GestureDetector(
+                        onTap: () {
+                          Get.to(() => AllNewsScreen());
+                        },
+                        child: Text(
+                          'Смотреть все',
+                          style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 13,
+                                  color: Color(0xff8F919C),
+                                  height: 1.3)),
+                        ),
                       )
                     ],
                   ),
@@ -504,7 +510,7 @@ class _MainScreenState extends State<MainScreen> {
                               Container(
                                 margin: EdgeInsets.only(bottom: 20),
                                 padding: EdgeInsets.only(
-                                    top: 30, bottom: 20, left: 30, right: 30),
+                                    top: 30, bottom: 20, left: 35, right: 35),
                                 decoration: BoxDecoration(
                                     color: Color(0xffFFE14D),
                                     borderRadius: BorderRadius.circular(15)),
