@@ -1,7 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:teztaxi/screens/news/all_news_screen.dart';
+import 'package:teztaxi/screens/news/only_news_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -40,7 +43,13 @@ class _MainScreenState extends State<MainScreen> {
                       )),
                       GestureDetector(
                         onTap: () {
-                          Get.to(() => AllNewsScreen());
+                          // Get.to(() => AllNewsScreen());
+                          PersistentNavBarNavigator.pushNewScreen(
+                            context,
+                            screen: AllNewsScreen(),
+                            withNavBar: true, // OPTIONAL VALUE. True by default.
+                            pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                          );
                         },
                         child: Text(
                           'Смотреть все',
@@ -61,75 +70,86 @@ class _MainScreenState extends State<MainScreen> {
                     transform: Matrix4.translationValues(24.0, 0.0, 0.0),
                     child: Row(
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              width: 247,
-                              height: 150,
-                              margin: EdgeInsets.only(right: 18.5, bottom: 15),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: Stack(
-                                children: [
-                                  Image.asset(
-                                    'assets/images/ex1.png',
-                                    fit: BoxFit.fill,
-                                  ),
-                                  Positioned(
-                                    top: 15,
-                                    left: 15,
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(5),
-                                          color: Colors.white),
-                                      child: Center(
-                                        child: Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 5,
-                                              top: 3,
-                                              right: 5,
-                                              bottom: 3),
-                                          child: Text(
-                                            'Ремонт',
-                                            style: GoogleFonts.poppins(
-                                                fontSize: 9,
-                                                fontWeight: FontWeight.w600,
-                                                color: Color(0xff100c27)),
+                        GestureDetector(
+                          onTap: (){
+                            PersistentNavBarNavigator.pushNewScreen(
+                              context,
+                              screen: OnlyNewsScreen(),
+                              withNavBar: true, // OPTIONAL VALUE. True by default.
+                              pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                            );
+
+                          },
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 247,
+                                height: 150,
+                                margin: EdgeInsets.only(right: 18.5, bottom: 15),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Stack(
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/ex1.png',
+                                      fit: BoxFit.fill,
+                                    ),
+                                    Positioned(
+                                      top: 15,
+                                      left: 15,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(5),
+                                            color: Colors.white),
+                                        child: Center(
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                                left: 5,
+                                                top: 3,
+                                                right: 5,
+                                                bottom: 3),
+                                            child: Text(
+                                              'Ремонт',
+                                              style: GoogleFonts.poppins(
+                                                  fontSize: 9,
+                                                  fontWeight: FontWeight.w600,
+                                                  color: Color(0xff100c27)),
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 5),
-                              child: Text(
-                                'Налоги на транспорт',
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 5),
+                                child: Text(
+                                  'Налоги на транспорт',
+                                  style: GoogleFonts.poppins(
+                                    textStyle: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w600,
+                                        color: Color(0xff100c27),
+                                        height: 1.3),
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                'На сколько сильно изменится жизнь',
                                 style: GoogleFonts.poppins(
                                   textStyle: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600,
-                                      color: Color(0xff100c27),
+                                      fontSize: 13,
+                                      // fontWeight: FontWeight.w600,
+                                      color: Color(0xff8F919C),
                                       height: 1.3),
                                 ),
                               ),
-                            ),
-                            Text(
-                              'На сколько сильно изменится жизнь',
-                              style: GoogleFonts.poppins(
-                                textStyle: TextStyle(
-                                    fontSize: 13,
-                                    // fontWeight: FontWeight.w600,
-                                    color: Color(0xff8F919C),
-                                    height: 1.3),
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

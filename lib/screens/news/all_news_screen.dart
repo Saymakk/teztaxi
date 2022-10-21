@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:teztaxi/screens/news/only_news_screen.dart';
 
 class AllNewsScreen extends StatefulWidget {
@@ -49,9 +50,15 @@ class _AllNewsScreenState extends State<AllNewsScreen> {
                   ),
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(
-                        () => OnlyNewsScreen(),
-                        transition: Transition.rightToLeftWithFade,
+                      // Get.to(
+                      //   () => OnlyNewsScreen(),
+                      //   transition: Transition.rightToLeftWithFade,
+                      // );
+                      PersistentNavBarNavigator.pushNewScreen(
+                        context,
+                        screen: OnlyNewsScreen(),
+                        withNavBar: true, // OPTIONAL VALUE. True by default.
+                        pageTransitionAnimation: PageTransitionAnimation.cupertino,
                       );
                     },
                     child: Stack(

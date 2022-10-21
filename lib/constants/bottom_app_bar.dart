@@ -8,7 +8,6 @@ import 'package:fluttericon/typicons_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:teztaxi/screens/main_screen/main_screen.dart';
 
-
 class BottomNav extends StatefulWidget {
   const BottomNav({Key? key}) : super(key: key);
 
@@ -18,10 +17,17 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   static const List<Widget> _widgetOptions = <Widget>[
-   MainScreen(),
-   MainScreen(),
-   MainScreen(),
-   MainScreen(),
+    MainScreen(),
+    MainScreen(),
+    MainScreen(),
+    MainScreen(),
+  ];
+
+  final screens = [
+    MainScreen(),
+    MainScreen(),
+    MainScreen(),
+    MainScreen(),
   ];
 
   int _selectedIndex = 0;
@@ -35,8 +41,6 @@ class _BottomNavState extends State<BottomNav> {
     });
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,10 +51,10 @@ class _BottomNavState extends State<BottomNav> {
         iconSize: 25,
         type: BottomNavigationBarType.fixed,
         selectedFontSize: 0,
-        selectedLabelStyle: GoogleFonts.poppins(
-            textStyle: TextStyle(fontSize: 10)),
-        unselectedLabelStyle: GoogleFonts.poppins(
-            textStyle: TextStyle(fontSize: 10)),
+        selectedLabelStyle:
+            GoogleFonts.poppins(textStyle: TextStyle(fontSize: 10)),
+        unselectedLabelStyle:
+            GoogleFonts.poppins(textStyle: TextStyle(fontSize: 10)),
         unselectedItemColor: Colors.grey,
         selectedItemColor: Colors.black,
         showSelectedLabels: true,
@@ -58,7 +62,9 @@ class _BottomNavState extends State<BottomNav> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: ImageIcon(
-              AssetImage('assets/icons/main_page_icon.png',),
+              AssetImage(
+                'assets/icons/main_page_icon.png',
+              ),
             ),
             activeIcon: ImageIcon(
               AssetImage('assets/icons/main_page_icon.png'),
@@ -70,7 +76,7 @@ class _BottomNavState extends State<BottomNav> {
               AssetImage('assets/icons/calendar_icon.png'),
             ),
             activeIcon: ImageIcon(
-              AssetImage( 'assets/icons/calendar_icon.png'),
+              AssetImage('assets/icons/calendar_icon.png'),
             ),
             label: 'Аренда',
           ),
@@ -97,7 +103,11 @@ class _BottomNavState extends State<BottomNav> {
         onTap: _onItemTapped,
       ),
       body: Container(
-        child: _widgetOptions.elementAt(_selectedIndex),
+        child: IndexedStack(
+          index: _selectedIndex,
+          // children: [ _widgetOptions.elementAt(_selectedIndex)]),
+          children: screens,
+        ),
       ),
     );
   }

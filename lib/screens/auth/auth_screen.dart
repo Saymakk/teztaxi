@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:teztaxi/constants/bottom_app_bar.dart';
+import 'package:teztaxi/constants/pers_bottom_app_bar.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({Key? key}) : super(key: key);
@@ -155,6 +156,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       ),
                       GestureDetector(
                         onTap: () => Get.offAll(() => BottomNav()),
+                        // onTap: () => Get.offAll(() => PNavBar()),
                         child: Container(
                           margin: EdgeInsets.only(bottom: 20),
                           height: 50,
