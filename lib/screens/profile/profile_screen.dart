@@ -194,13 +194,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           )
                         ],
                       ),
-                      Container(margin: EdgeInsets.only(top: 40),
+                      Container(
+                        margin: EdgeInsets.only(top: 40),
                         decoration: BoxDecoration(
-                            color: Color(0xff4F4F4F),
-                            borderRadius: BorderRadius.circular(15.05),),
+                          color: Color(0xff4F4F4F),
+                          borderRadius: BorderRadius.circular(15.05),
+                        ),
                         child: Container(
-                          margin: EdgeInsets.symmetric(horizontal: 77, vertical: 13),
-                          child: Text('Выйти из аккаунта', style: GoogleFonts.poppins(fontWeight: FontWeight.w600, fontSize: 16, color: Colors.white),),),
+                          margin: EdgeInsets.symmetric(
+                              horizontal: 77, vertical: 13),
+                          child: Text(
+                            'Выйти из аккаунта',
+                            style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 16,
+                                color: Colors.white),
+                          ),
+                        ),
                       ),
                     ],
                   ),
