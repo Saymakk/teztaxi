@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:teztaxi/screens/news/all_news_screen.dart';
 import 'package:teztaxi/screens/news/only_news_screen.dart';
+import 'package:teztaxi/screens/profile/profile_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -47,8 +48,10 @@ class _MainScreenState extends State<MainScreen> {
                           PersistentNavBarNavigator.pushNewScreen(
                             context,
                             screen: AllNewsScreen(),
-                            withNavBar: true, // OPTIONAL VALUE. True by default.
-                            pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                            withNavBar: true,
+                            // OPTIONAL VALUE. True by default.
+                            pageTransitionAnimation:
+                                PageTransitionAnimation.cupertino,
                           );
                         },
                         child: Text(
@@ -71,14 +74,15 @@ class _MainScreenState extends State<MainScreen> {
                     child: Row(
                       children: [
                         GestureDetector(
-                          onTap: (){
+                          onTap: () {
                             PersistentNavBarNavigator.pushNewScreen(
                               context,
                               screen: OnlyNewsScreen(),
-                              withNavBar: true, // OPTIONAL VALUE. True by default.
-                              pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                              withNavBar: true,
+                              // OPTIONAL VALUE. True by default.
+                              pageTransitionAnimation:
+                                  PageTransitionAnimation.cupertino,
                             );
-
                           },
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,7 +90,8 @@ class _MainScreenState extends State<MainScreen> {
                               Container(
                                 width: 247,
                                 height: 150,
-                                margin: EdgeInsets.only(right: 18.5, bottom: 15),
+                                margin:
+                                    EdgeInsets.only(right: 18.5, bottom: 15),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
                                 ),
@@ -295,7 +300,7 @@ class _MainScreenState extends State<MainScreen> {
                             ),
                             Positioned(
                               child: GestureDetector(
-                                // onTap: () => Get.to(()=>),
+                                onTap: () => Get.to(() => ProfileScreen()),
                                 child: Image.asset(
                                   'assets/icons/open.png',
                                   width: 30,

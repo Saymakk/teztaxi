@@ -7,6 +7,7 @@ import 'package:fluttericon/linecons_icons.dart';
 import 'package:fluttericon/typicons_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:teztaxi/screens/main_screen/main_screen.dart';
+import 'package:teztaxi/screens/profile/profile_screen.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({Key? key}) : super(key: key);
@@ -20,14 +21,14 @@ class _BottomNavState extends State<BottomNav> {
     MainScreen(),
     MainScreen(),
     MainScreen(),
-    MainScreen(),
+    ProfileScreen(),
   ];
 
   final screens = [
     MainScreen(),
     MainScreen(),
     MainScreen(),
-    MainScreen(),
+    ProfileScreen(),
   ];
 
   int _selectedIndex = 0;
