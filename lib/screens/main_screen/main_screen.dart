@@ -230,89 +230,90 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                   ),
                 ),
-                Container(
-                  margin:
-                      EdgeInsets.only(top: 40, left: 24, right: 24, bottom: 20),
-                  child: Align(
-                    alignment: Alignment.topLeft,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Профиль',
-                          style: GoogleFonts.poppins(
-                            textStyle: TextStyle(
-                                fontSize: 28,
-                                fontWeight: FontWeight.w600,
-                                color: Color(0xff100C27),
-                                height: 1.3),
-                          ),
-                        ),
-                        Stack(
-                          children: [
-                            Container(
-                              width: double.infinity,
-                              margin: EdgeInsets.only(top: 20),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: Color(0xff21CAC8),
-                              ),
-                              child: Container(
-                                  margin: EdgeInsets.only(top: 20, left: 20),
-                                  child: Column(
-                                    children: [
-                                      Align(
-                                        alignment: Alignment.topLeft,
-                                        child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(bottom: 10),
-                                          child: Text(
-                                            'Омар Женис Картбайулы',
-                                            style: GoogleFonts.poppins(
-                                              textStyle: TextStyle(
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w600,
-                                                  color: Colors.white,
-                                                  height: 1.2),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Align(
-                                        alignment: Alignment.centerLeft,
-                                        child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(bottom: 47),
-                                          child: Text(
-                                            'Гос. номер: 103ABK02',
-                                            style: GoogleFonts.poppins(
-                                              textStyle: TextStyle(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w300,
-                                                  color: Color(0xff100C27),
-                                                  height: 1.2),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  )),
+                GestureDetector(
+                  onTap: () => Get.to(() => ProfileScreen()),
+
+                  child: Container(
+                    margin:
+                        EdgeInsets.only(top: 40, left: 24, right: 24, bottom: 20),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Профиль',
+                            style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color(0xff100C27),
+                                  height: 1.3),
                             ),
-                            Positioned(
-                              child: GestureDetector(
-                                onTap: () => Get.to(() => ProfileScreen()),
+                          ),
+                          Stack(
+                            children: [
+                              Container(
+                                width: double.infinity,
+                                margin: EdgeInsets.only(top: 20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  color: Color(0xff21CAC8),
+                                ),
+                                child: Container(
+                                    margin: EdgeInsets.only(top: 20, left: 20),
+                                    child: Column(
+                                      children: [
+                                        Align(
+                                          alignment: Alignment.topLeft,
+                                          child: Padding(
+                                            padding:
+                                                const EdgeInsets.only(bottom: 10),
+                                            child: Text(
+                                              'Омар Женис Картбайулы',
+                                              style: GoogleFonts.poppins(
+                                                textStyle: TextStyle(
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.w600,
+                                                    color: Colors.white,
+                                                    height: 1.2),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Padding(
+                                            padding:
+                                                const EdgeInsets.only(bottom: 47),
+                                            child: Text(
+                                              'Гос. номер: 103ABK02',
+                                              style: GoogleFonts.poppins(
+                                                textStyle: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w300,
+                                                    color: Color(0xff100C27),
+                                                    height: 1.2),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )),
+                              ),
+                              Positioned(
                                 child: Image.asset(
                                   'assets/icons/open.png',
                                   width: 30,
                                   height: 30,
                                 ),
+                                bottom: 15,
+                                right: 15,
                               ),
-                              bottom: 15,
-                              right: 15,
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

@@ -155,7 +155,10 @@ class _AuthScreenState extends State<AuthScreen> {
                         ),
                       ),
                       GestureDetector(
-                        onTap: () => Get.offAll(() => BottomNav()),
+                        onTap: () => Get.offAll(
+                          () => BottomNav(),
+                          transition: Transition.downToUp,
+                        ),
                         // onTap: () => Get.offAll(() => PNavBar()),
                         child: Container(
                           margin: EdgeInsets.only(bottom: 20),

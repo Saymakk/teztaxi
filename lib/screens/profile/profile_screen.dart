@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:teztaxi/constants/bottom_app_bar.dart';
+import 'package:teztaxi/screens/main_screen/main_screen.dart';
+import 'package:teztaxi/screens/profile/documents/documents_screen.dart';
+import 'package:teztaxi/screens/profile/support/support_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -18,15 +22,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
         backgroundColor: Color(0xffF4F5F7),
         appBar: AppBar(
           toolbarHeight: 59,
-          leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(
-              Icons.arrow_back_ios,
-              color: Color(0xff1c2340),
-            ),
-          ),
+          // leading: IconButton(
+          //   onPressed: () {
+          //     // Get.off(BottomNav());
+          //   },
+          //   icon: Icon(
+          //     Icons.arrow_back_ios,
+          //     color: Color(0xff1c2340),
+          //   ),
+          // ),
+          centerTitle: true,
           elevation: 0,
           backgroundColor: Colors.white,
           title: Text(
@@ -47,6 +52,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: CircleAvatar(
                   minRadius: 54,
                   maxRadius: 54,
+                  child: Image.asset(
+                    'assets/images/avatar.png',
+                    fit: BoxFit.fill,
+                  ),
                 )),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 20),
@@ -98,6 +107,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Column(
                         children: [
                           ListTile(
+                            onTap: () => Get.to(
+                              () => DocumentsScreen(),
+                              transition: Transition.rightToLeft,
+                            ),
                             visualDensity:
                                 VisualDensity(horizontal: 0, vertical: -4),
                             leading: SvgPicture.asset('assets/icons/docs.svg'),
@@ -163,6 +176,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Column(
                         children: [
                           ListTile(
+                            onTap: ()=>Get.to(()=>SupportScreen()),
                             visualDensity:
                                 VisualDensity(horizontal: 0, vertical: -4),
                             leading:
