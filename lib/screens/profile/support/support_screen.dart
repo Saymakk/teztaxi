@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:teztaxi/screens/profile/answers_screen/answers_screen.dart';
 
 class SupportScreen extends StatefulWidget {
   const SupportScreen({Key? key}) : super(key: key);
@@ -413,30 +414,33 @@ class _SupportScreenState extends State<SupportScreen> {
                     )),
               ),
             ),
-            Container(
-              margin: EdgeInsets.only(bottom: 15),
-              decoration: BoxDecoration(
-                  color: Color(0xffB7FFE1),
-                  borderRadius: BorderRadius.circular(10)),
+            GestureDetector(
+              onTap: ()=>Get.to(()=>AnswersScreen(), transition: Transition.rightToLeft),
               child: Container(
-                  margin:
-                      EdgeInsets.only(left: 20, top: 20, right: 15, bottom: 56),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Ответы на вопросы',
-                        style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xff1C2340)),
-                      ),
-                      Icon(
-                        Icons.arrow_forward_ios,
-                        color: Color(0xff100C27),
-                      ),
-                    ],
-                  )),
+                margin: EdgeInsets.only(bottom: 15),
+                decoration: BoxDecoration(
+                    color: Color(0xffB7FFE1),
+                    borderRadius: BorderRadius.circular(10)),
+                child: Container(
+                    margin:
+                        EdgeInsets.only(left: 20, top: 20, right: 15, bottom: 56),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Ответы на вопросы',
+                          style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xff1C2340)),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Color(0xff100C27),
+                        ),
+                      ],
+                    )),
+              ),
             ),
           ],
         ),
