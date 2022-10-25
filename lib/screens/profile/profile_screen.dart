@@ -45,13 +45,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 30),
           child: Column(
             children: [
               Center(
                   child: CircleAvatar(
-                minRadius: 54,
-                maxRadius: 54,
+                minRadius: 75,
+                maxRadius: 75,
                 child: Image.asset(
                   'assets/images/avatar.png',
                   fit: BoxFit.fill,
@@ -60,7 +60,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               GestureDetector(
                 onTap: ()=>Get.to(() => DriverDataScreen()),
                 child: Container(
-                  margin: EdgeInsets.symmetric(vertical: 20),
+                  margin: EdgeInsets.symmetric(vertical: 30),
                   decoration: BoxDecoration(
                       color: Color(0xffFFE14D),
                       borderRadius: BorderRadius.circular(10)),
@@ -133,7 +133,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           visualDensity:
                               VisualDensity(horizontal: 0, vertical: -4),
                           leading: SvgPicture.asset('assets/icons/hist.svg'),
-                          title: Text('История платежей'),
+                          title: Text('История оплат по аренде'),
                           trailing: Icon(Icons.arrow_forward_ios_outlined),
                           minLeadingWidth: 0,
                         ),
@@ -143,40 +143,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         )
                       ],
                     ),
-                    Column(
-                      children: [
-                        ListTile(
-                          visualDensity:
-                              VisualDensity(horizontal: 0, vertical: -4),
-                          leading:
-                              SvgPicture.asset('assets/icons/hist_red.svg'),
-                          title: Text('История оплат по долгам'),
-                          trailing: Icon(Icons.arrow_forward_ios_outlined),
-                          minLeadingWidth: 0,
-                        ),
-                        Divider(
-                          endIndent: 20,
-                          indent: 15,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        ListTile(
-                          visualDensity:
-                              VisualDensity(horizontal: 0, vertical: -4),
-                          leading: SvgPicture.asset('assets/icons/notif.svg'),
-                          title: Text('Уведомления'),
-                          trailing: Icon(Icons.arrow_forward_ios_outlined),
-                          minLeadingWidth: 0,
-                        ),
-                        Divider(
-                          endIndent: 20,
-                          indent: 15,
-                        )
-                      ],
-                    ),
-                    Column(
+                     Column(
                       children: [
                         ListTile(
                           onTap: () => Get.to(() => SupportScreen(),
