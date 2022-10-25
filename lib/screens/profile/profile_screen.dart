@@ -6,6 +6,7 @@ import 'package:teztaxi/constants/bottom_app_bar.dart';
 import 'package:teztaxi/screens/main_screen/main_screen.dart';
 import 'package:teztaxi/screens/profile/documents/documents_screen.dart';
 import 'package:teztaxi/screens/profile/driver_data/driver_data.dart';
+import 'package:teztaxi/screens/profile/payment_history/payment_history_screen.dart';
 import 'package:teztaxi/screens/profile/support/support_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -130,6 +131,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Column(
                       children: [
                         ListTile(
+                          onTap: ()=>Get.to(()=>PaymentHistoryScreen(), transition: Transition.rightToLeft),
                           visualDensity:
                               VisualDensity(horizontal: 0, vertical: -4),
                           leading: SvgPicture.asset('assets/icons/hist.svg'),
