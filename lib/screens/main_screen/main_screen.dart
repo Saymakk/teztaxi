@@ -231,7 +231,7 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () => Get.to(() => ProfileScreen()),
+                  onTap: () => Get.to(() => ProfileScreen(), transition: Transition.rightToLeft),
 
                   child: Container(
                     margin:

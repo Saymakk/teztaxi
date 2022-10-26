@@ -16,14 +16,7 @@ class _DocumentsScreenState extends State<DocumentsScreen> {
     return Scaffold(
       backgroundColor: Color(0xffFFE14D),
       appBar: AppBar(
-        // systemOverlayStyle: SystemUiOverlayStyle(
-        //   // Status bar color
-        //   statusBarColor: Colors.transparent,
-        //   systemNavigationBarColor: Colors.yellow,
-        //   // Status bar brightness (optional)
-        //   statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
-        //   statusBarBrightness: Brightness.light, // For iOS (dark icons)
-        // ),
+
         backgroundColor: Colors.transparent,
         toolbarHeight: 59,
         shadowColor: Colors.transparent,

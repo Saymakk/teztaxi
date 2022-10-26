@@ -45,202 +45,140 @@ class _DriverDataScreenState extends State<DriverDataScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Имя',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w600, fontSize: 16),
-                      ),
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xffF4F5F7),
+                  Container(
+                    width: double.infinity,
+                    child: Column(
+                      children: [
+                        Column(
+                          children: [
+                            ListTile(
+                              title: Text('Имя',
+                                style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w600, fontSize: 16),),
+                              trailing: Text('Омар',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xff8A8D9F)),),
+                              contentPadding: EdgeInsets.all(0),
+                            ),
+                            Divider(
+                              height: 1,
+                            ),
+                          ],
                         ),
-                        margin: EdgeInsets.only(top: 10, bottom: 20),
-                        child: Container(
-                          margin:
-                              EdgeInsets.only(top: 18, left: 15, bottom: 13),
-                          child: Text(
-                            'Омар',
-                            style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0xff8A8D9F)),
-                          ),
+                        Column(
+                          children: [
+                            ListTile(
+                              title: Text('Фамилия',
+                                style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w600, fontSize: 16),),
+                              trailing: Text('Картбайулы',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xff8A8D9F)),),
+                              contentPadding: EdgeInsets.all(0),
+                            ),
+                            Divider(
+                              height: 1,
+                            ),
+                          ],
                         ),
-                      ),
-                    ],
+                        Column(
+                          children: [
+                            ListTile(
+                              title: Text('Отчество',
+                                style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w600, fontSize: 16),),
+                              trailing: Text('Женис',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xff8A8D9F)),),
+                              contentPadding: EdgeInsets.all(0),
+                            ),
+                            Divider(
+                              height: 1,
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            ListTile(
+                              title: Text('ИИН',
+                                style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w600, fontSize: 16),),
+                              trailing: Text('401 123 312 141',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xff8A8D9F)),),
+                              contentPadding: EdgeInsets.all(0),
+                            ),
+                            Divider(
+                              height: 1,
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            ListTile(
+                              title: Text('Дата рождения',
+                                style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w600, fontSize: 16),),
+                              trailing: Text('18.10.93',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xff8A8D9F)),),
+                              contentPadding: EdgeInsets.all(0),
+                            ),
+                            Divider(
+                              height: 1,
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            ListTile(
+                              title: Text('Номер телефона',
+                                style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w600, fontSize: 16),),
+                              trailing: Text('+7 705 123 8989',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xff8A8D9F)),),
+                              contentPadding: EdgeInsets.all(0),
+                            ),
+                            Divider(
+                              height: 1,
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            ListTile(
+                              title: Text('Гос. номер',
+                                style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w600, fontSize: 16),),
+                              trailing: Text('130AVF02',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xff8A8D9F)),),
+                              contentPadding: EdgeInsets.all(0),
+                            ),
+                            Divider(
+                              height: 1,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                  Column(crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Фамилия',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w600, fontSize: 16),
-                      ),
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xffF4F5F7),
-                        ),
-                        margin: EdgeInsets.only(top: 10, bottom: 20),
-                        child: Container(
-                          margin:
-                          EdgeInsets.only(top: 18, left: 15, bottom: 13),
-                          child: Text(
-                            'Картбайулы',
-                            style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0xff8A8D9F)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Отчество',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w600, fontSize: 16),
-                      ),
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xffF4F5F7),
-                        ),
-                        margin: EdgeInsets.only(top: 10, bottom: 20),
-                        child: Container(
-                          margin:
-                          EdgeInsets.only(top: 18, left: 15, bottom: 13),
-                          child: Text(
-                            'Женис',
-                            style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0xff8A8D9F)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'ИИН',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w600, fontSize: 16),
-                      ),
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xffF4F5F7),
-                        ),
-                        margin: EdgeInsets.only(top: 10, bottom: 20),
-                        child: Container(
-                          margin:
-                          EdgeInsets.only(top: 18, left: 15, bottom: 13),
-                          child: Text(
-                            '401 568 276 643',
-                            style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0xff8A8D9F)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Дата рождения',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w600, fontSize: 16),
-                      ),
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xffF4F5F7),
-                        ),
-                        margin: EdgeInsets.only(top: 10, bottom: 20),
-                        child: Container(
-                          margin:
-                          EdgeInsets.only(top: 18, left: 15, bottom: 13),
-                          child: Text(
-                            '18.10.1994',
-                            style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0xff8A8D9F)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Номер телефона',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w600, fontSize: 16),
-                      ),
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xffF4F5F7),
-                        ),
-                        margin: EdgeInsets.only(top: 10, bottom: 20),
-                        child: Container(
-                          margin:
-                          EdgeInsets.only(top: 18, left: 15, bottom: 13),
-                          child: Text(
-                            '+ 7 775 864 25 52',
-                            style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0xff8A8D9F)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Гос. номер',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w600, fontSize: 16),
-                      ),
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xffF4F5F7),
-                        ),
-                        margin: EdgeInsets.only(top: 10, bottom: 20),
-                        child: Container(
-                          margin:
-                          EdgeInsets.only(top: 18, left: 15, bottom: 13),
-                          child: Text(
-                            '103ABK02',
-                            style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0xff8A8D9F)),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+
                 ],
               ),
             ),

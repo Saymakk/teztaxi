@@ -9,6 +9,8 @@ import 'package:teztaxi/screens/profile/driver_data/driver_data.dart';
 import 'package:teztaxi/screens/profile/payment_history/payment_history_screen.dart';
 import 'package:teztaxi/screens/profile/support/support_screen.dart';
 
+import 'settings_screen/settings_screen.dart';
+
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
@@ -59,7 +61,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               )),
               GestureDetector(
-                onTap: ()=>Get.to(() => DriverDataScreen()),
+                onTap: ()=>Get.to(() => DriverDataScreen(), transition: Transition.rightToLeft),
                 child: Container(
                   margin: EdgeInsets.symmetric(vertical: 30),
                   decoration: BoxDecoration(
@@ -166,6 +168,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Column(
                       children: [
                         ListTile(
+                          onTap: ()=>Get.to(()=>SettingsScreen(), transition: Transition.rightToLeft),
                           visualDensity:
                               VisualDensity(horizontal: 0, vertical: -4),
                           leading:

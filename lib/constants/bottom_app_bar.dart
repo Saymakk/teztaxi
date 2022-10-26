@@ -7,6 +7,7 @@ import 'package:fluttericon/linecons_icons.dart';
 import 'package:fluttericon/typicons_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:teztaxi/screens/main_screen/main_screen.dart';
+import 'package:teztaxi/screens/payments_schedule/payments_schedule_screen.dart';
 import 'package:teztaxi/screens/profile/profile_screen.dart';
 
 class BottomNav extends StatefulWidget {
@@ -19,14 +20,14 @@ class BottomNav extends StatefulWidget {
 class _BottomNavState extends State<BottomNav> {
   static const List<Widget> _widgetOptions = <Widget>[
     MainScreen(),
-    MainScreen(),
+    PaymentsScheduleScreen(),
     MainScreen(),
     ProfileScreen(),
   ];
 
   final screens = [
     MainScreen(),
-    MainScreen(),
+    PaymentsScheduleScreen(),
     MainScreen(),
     ProfileScreen(),
   ];
@@ -79,7 +80,7 @@ class _BottomNavState extends State<BottomNav> {
             activeIcon: ImageIcon(
               AssetImage('assets/icons/calendar_icon.png'),
             ),
-            label: 'Аренда',
+            label: 'Графиск платежей',
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
