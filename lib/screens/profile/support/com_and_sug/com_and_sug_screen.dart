@@ -82,57 +82,60 @@ class _ComAndSugScreenState extends State<ComAndSugScreen> {
                 ),
               ),
               Container(
-                width: double.infinity,
+                margin: EdgeInsets.only(bottom: 15),
                 decoration: BoxDecoration(
-                    color: Color(0xffFEFAF8),
-                    borderRadius: BorderRadius.circular(10)),
+                  color: Color(0xfff9f9ff),
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 child: Container(
                   margin: EdgeInsets.all(15),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SvgPicture.asset('assets/icons/t.svg'),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Жалоба',
-                            style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                height: 2.4),
-                          ),
-                          Text(
-                            'Счёт по оплате не прошёл',
-
-                              style: GoogleFonts.poppins(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              height: 2.1),
-                          ),
-                        ],
+                      Image.asset(
+                        'assets/icons/t.png',
+                        width: 36,
+                        height: 24,
+                      ),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(left: 15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Жалоба',
+                                style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                    color: Color(0xff1c2340)),),
+                              SizedBox(height: 5,),
+                              Text('Не прошёл счёт на оплату',
+                                style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 14,
+                                    color: Color(0xff8F919C)),),
+                            ],),
+                        ),
                       ),
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text('20.10.22',
-
                             style: GoogleFonts.poppins(
-                                fontSize: 11,
                                 fontWeight: FontWeight.w500,
-                                height: 1.65, color: Color(0xff8F919C)),),
+                                fontSize: 11,
+                                color: Color(0xff8F919C)),),
+                          SizedBox(height: 26,),
                           Text('15:47',
-
-                                style: GoogleFonts.poppins(
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.w500,
-                                  height: 1.65, color: Color(0xff8F919C))),
-                        ],
-                      ),
+                            style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 11,
+                                color: Color(0xff8F919C)),),
+                        ],),
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

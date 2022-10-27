@@ -65,7 +65,7 @@ class _PaymentsScheduleScreenState extends State<PaymentsScheduleScreen> {
           child: TabBarView(
             children: [
               RentCalendar(),
-              Container(),
+             Container(),
             ],
           ),
         ),

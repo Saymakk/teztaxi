@@ -7,6 +7,7 @@ import 'package:fluttericon/linecons_icons.dart';
 import 'package:fluttericon/typicons_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:teztaxi/screens/main_screen/main_screen.dart';
+import 'package:teztaxi/screens/notifications/notifications_screen.dart';
 import 'package:teztaxi/screens/payments_schedule/payments_schedule_screen.dart';
 import 'package:teztaxi/screens/profile/profile_screen.dart';
 
@@ -21,14 +22,14 @@ class _BottomNavState extends State<BottomNav> {
   static const List<Widget> _widgetOptions = <Widget>[
     MainScreen(),
     PaymentsScheduleScreen(),
-    MainScreen(),
+    NotificationsScreen(),
     ProfileScreen(),
   ];
 
   final screens = [
     MainScreen(),
     PaymentsScheduleScreen(),
-    MainScreen(),
+    NotificationsScreen(),
     ProfileScreen(),
   ];
 

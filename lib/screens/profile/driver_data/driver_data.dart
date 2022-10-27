@@ -170,9 +170,7 @@ class _DriverDataScreenState extends State<DriverDataScreen> {
                                     color: Color(0xff8A8D9F)),),
                               contentPadding: EdgeInsets.all(0),
                             ),
-                            Divider(
-                              height: 1,
-                            ),
+                        
                           ],
                         ),
                       ],

@@ -41,144 +41,149 @@ class _RentTabState extends State<RentTab> {
                     ),
                   ],
                 ),
-                Divider(thickness: 1,),
-                Column(children: [ Padding(
-                  padding: const EdgeInsets.only(bottom: 15),
-                  child: Text(
-                    '18.10.22',
-                    style: GoogleFonts.poppins(
-                        fontSize: 16, fontWeight: FontWeight.w300, height: 2),
-                  ),
+                Divider(
+                  thickness: 1,
                 ),
-                  Column(
-                    children: [
-
-                      Container(
-                        height: 196,
-                        width: double.infinity,
-                        margin: EdgeInsets.only(bottom: 15),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          gradient: LinearGradient(
-                            colors: gradient,
-                            stops: stops,
-                            end: Alignment.bottomCenter,
-                            begin: Alignment.topCenter,
-                          ),
-                        ),
-                        child: Container(
-                          // margin: EdgeInsets.all(15),
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                  left: 15,
-                                  top: 15,
-                                  child: Text(
-                                    'Сумма оплаты: ',
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        height: 1.92,
-                                        color: Color(0xff100C27)),
-                                  )),
-                              Positioned(
-                                  left: 15,
-                                  top: 79,
-                                  child: Text(
-                                    'Платёж: ',
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        height: 1.92,
-                                        color: Color(0xff100C27)),
-                                  )),
-                              Positioned(
-                                  left: 15,
-                                  bottom: 35,
-                                  child: Text(
-                                    'Тип: ',
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        height: 1.92,
-                                        color: Color(0xff100C27)),
-                                  )),
-                              Positioned(
-                                  top: 8,
-                                  right: 98,
-                                  child: Text(
-                                    '15.000',
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.w600,
-                                        height: 1.92,
-                                        color: Color(0xff100C27)),
-                                  )),
-                              Positioned(
-                                  right: 98,
-                                  top: 77,
-                                  child: Text(
-                                    'Kaspi',
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600,
-                                        height: 1.92,
-                                        color: Color(0xff100C27)),
-                                  )),
-                              Positioned(
-                                  left: 55,
-                                  bottom: 36,
-                                  child: Text(
-                                    'Аренда',
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        height: 1.92,
-                                        color: Color(0xff100C27)),
-                                  )),
-                              Positioned(
-                                  top: 15,
-                                  right: 83,
-                                  child: SvgPicture.asset(
-                                      'assets/images/vertical_divider.svg')),
-                              Positioned(
-                                  top: 15,
-                                  right: 15,
-                                  child: Image.asset(
-                                    'assets/icons/agreed.png',
-                                    width: 30,
-                                    height: 30,
-                                  )),
-                              Positioned(
-                                  top: 88,
-                                  right: 15,
-                                  child: Text(
-                                    '18.10.22',
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w400,
-                                        height: 1.68,
-                                        color: Color(0xff100C27)),
-                                  )),
-                              Positioned(
-                                  bottom: 15,
-                                  right: 15,
-                                  child: Text(
-                                    '18.10.22',
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w400,
-                                        height: 1.68,
-                                        color: Color(0xff747474)),
-                                  )),
-                            ],
-                          ),
-                        ),
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 15),
+                      child: Text(
+                        '18.10.22',
+                        style: GoogleFonts.poppins(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w300,
+                            height: 2),
                       ),
-                    ],
-                  ),],),
-
-
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          height: 196,
+                          width: double.infinity,
+                          margin: EdgeInsets.only(bottom: 15),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            gradient: LinearGradient(
+                              colors: gradient,
+                              stops: stops,
+                              end: Alignment.bottomCenter,
+                              begin: Alignment.topCenter,
+                            ),
+                          ),
+                          child: Container(
+                            // margin: EdgeInsets.all(15),
+                            child: Stack(
+                              children: [
+                                Positioned(
+                                    left: 15,
+                                    top: 15,
+                                    child: Text(
+                                      'Сумма оплаты: ',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                          height: 1.92,
+                                          color: Color(0xff100C27)),
+                                    )),
+                                Positioned(
+                                    left: 15,
+                                    top: 79,
+                                    child: Text(
+                                      'Платёж: ',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                          height: 1.92,
+                                          color: Color(0xff100C27)),
+                                    )),
+                                Positioned(
+                                    left: 15,
+                                    bottom: 35,
+                                    child: Text(
+                                      'Тип: ',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                          height: 1.92,
+                                          color: Color(0xff100C27)),
+                                    )),
+                                Positioned(
+                                    top: 8,
+                                    right: 98,
+                                    child: Text(
+                                      '15.000',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.w600,
+                                          height: 1.92,
+                                          color: Color(0xff100C27)),
+                                    )),
+                                Positioned(
+                                    right: 98,
+                                    top: 77,
+                                    child: Text(
+                                      'Kaspi',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600,
+                                          height: 1.92,
+                                          color: Color(0xff100C27)),
+                                    )),
+                                Positioned(
+                                    left: 55,
+                                    bottom: 36,
+                                    child: Text(
+                                      'Аренда',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                          height: 1.92,
+                                          color: Color(0xff100C27)),
+                                    )),
+                                Positioned(
+                                    top: 15,
+                                    right: 83,
+                                    child: SvgPicture.asset(
+                                        'assets/images/vertical_divider.svg')),
+                                Positioned(
+                                    top: 15,
+                                    right: 15,
+                                    child: Image.asset(
+                                      'assets/icons/agreed.png',
+                                      width: 30,
+                                      height: 30,
+                                    )),
+                                Positioned(
+                                    top: 88,
+                                    right: 15,
+                                    child: Text(
+                                      '18.10.22',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w400,
+                                          height: 1.68,
+                                          color: Color(0xff100C27)),
+                                    )),
+                                Positioned(
+                                    bottom: 15,
+                                    right: 15,
+                                    child: Text(
+                                      '18.10.22',
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w400,
+                                          height: 1.68,
+                                          color: Color(0xff747474)),
+                                    )),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ],
             ),
           )),
