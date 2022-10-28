@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:teztaxi/screens/payments_schedule/debt_tab/debt_screen.dart';
 
 import 'rent_tab/rent_calendar.dart';
 
@@ -65,7 +66,7 @@ class _PaymentsScheduleScreenState extends State<PaymentsScheduleScreen> {
           child: TabBarView(
             children: [
               RentCalendar(),
-             Container(),
+             DebtScreen(),
             ],
           ),
         ),

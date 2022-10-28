@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:teztaxi/screens/payments/payment_screen.dart';
 
 class RentCalendar extends StatefulWidget {
   const RentCalendar({Key? key}) : super(key: key);
@@ -48,42 +50,43 @@ class _RentCalendarState extends State<RentCalendar> {
                   formatButtonShowsNext: false,
                 ),
                 calendarStyle: CalendarStyle(
-                    defaultDecoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        // border: Border.all(color: Colors.black),
-                        color: Color(0xfff1f1f1)),
-                    weekendDecoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        // border: Border.all(color: Colors.black),
-                        color: Color(0xfff1f1f1)),
-                    todayDecoration: _selectedDay == null
-                        ? BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            border: Border.all(color: Colors.black),
-                          )
-                        : BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            // border: Border.all(color: Colors.black),
-                            color: Color(0xfff1f1f1)),
-                    // markerMargin: EdgeInsets.all(10),
-                    cellMargin: EdgeInsets.all(8),
-                    selectedDecoration: BoxDecoration(
-                        border: Border.all(color: Colors.black, width: 1),
-                        borderRadius: BorderRadius.circular(5),
-                        color: Color(0xfff1f1f1)),
-                    selectedTextStyle: GoogleFonts.poppins(
+                  defaultDecoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      // border: Border.all(color: Colors.black),
+                      color: Color(0xfff1f1f1)),
+                  weekendDecoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      // border: Border.all(color: Colors.black),
+                      color: Color(0xfff1f1f1)),
+                  todayDecoration: _selectedDay == null
+                      ? BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          border: Border.all(color: Colors.black),
+                        )
+                      : BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          // border: Border.all(color: Colors.black),
+                          color: Color(0xfff1f1f1)),
+                  // markerMargin: EdgeInsets.all(10),
+                  cellMargin: EdgeInsets.all(8),
+                  selectedDecoration: BoxDecoration(
+                      border: Border.all(color: Colors.black, width: 1),
+                      borderRadius: BorderRadius.circular(5),
+                      color: Color(0xfff1f1f1)),
+                  selectedTextStyle: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  markerDecoration: BoxDecoration(
                       color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    markerDecoration: BoxDecoration(
-                        color: Colors.black,
-                        border: Border.all(color: Colors.black, width: 2)),
-                    todayTextStyle: GoogleFonts.poppins(
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    )),
+                      border: Border.all(color: Colors.black, width: 2)),
+                  todayTextStyle: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
                 calendarFormat: CalendarFormat.week,
                 startingDayOfWeek: StartingDayOfWeek.monday,
                 firstDay: DateTime.utc(2020, 01, 01),
@@ -97,7 +100,14 @@ class _RentCalendarState extends State<RentCalendar> {
                 // rangeEndDay: _rangeEnd,
                 // calendarFormat: _calendarFormat,
                 rangeSelectionMode: _rangeSelectionMode,
+                // calendarBuilders: CalendarBuilders(
+                //     selectedBuilder: (context, date, events) =>
+                //         Container(
+                //             margin: EdgeInsets.all(5),
+                //             alignment: Alignment.center ,
+                //             child: Text(date.day.toString()))),
                 onDaySelected: (selectedDay, focusedDay) {
+                  print(selectedDay);
                   if (!isSameDay(_selectedDay, selectedDay)) {
                     setState(() {
                       _selectedDay = selectedDay;
@@ -281,21 +291,24 @@ class _RentCalendarState extends State<RentCalendar> {
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
-                    child: Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          color: Color(0xff21cac8),
-                          borderRadius: BorderRadius.circular(5)),
+                    child: GestureDetector(
+                      onTap: ()=>Get.to(()=>PaymentScreen(), transition: Transition.rightToLeft),
                       child: Container(
-                          margin: EdgeInsets.symmetric(vertical: 16),
-                          child: Text(
-                            'Перейти к оплате',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.poppins(
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600),
-                          )),
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            color: Color(0xff21cac8),
+                            borderRadius: BorderRadius.circular(5)),
+                        child: Container(
+                            margin: EdgeInsets.symmetric(vertical: 16),
+                            child: Text(
+                              'Перейти к оплате',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.poppins(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600),
+                            )),
+                      ),
                     ),
                   ),
                 ],
