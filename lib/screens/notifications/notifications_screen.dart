@@ -46,6 +46,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         child: Column(
           children: [
             Container(
+              margin: EdgeInsets.only(bottom: 15),
               decoration: BoxDecoration(
                 color: Color(0xfff9f9ff),
                 borderRadius: BorderRadius.circular(10),

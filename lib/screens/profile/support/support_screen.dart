@@ -444,34 +444,37 @@ class _SupportScreenState extends State<SupportScreen> {
                       )),
                 ),
               ),
-              GestureDetector(
-                onTap: ()=>Get.to(()=>ComAndSugScreen(), transition: Transition.rightToLeft),
-                child: Container(
-                  margin: EdgeInsets.only(bottom: 15),
-                  decoration: BoxDecoration(
-                      color: Color(0xffB7FFE1),
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Container(
-                      margin:
-                      EdgeInsets.only(left: 20, top: 20, right: 15, bottom: 56),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Жалобы и предложения',
-                            style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                color: Color(0xff1C2340)),
-                          ),
-                          Icon(
-                            Icons.arrow_forward_ios,
-                            color: Color(0xff100C27),
-                          ),
-                        ],
-                      )),
-                ),
-              ),
+
+              //РАСКОММЕНТИТЬ В БУДУЩЕМ!!!
+
+              // GestureDetector(
+              //   onTap: ()=>Get.to(()=>ComAndSugScreen(), transition: Transition.rightToLeft),
+              //   child: Container(
+              //     margin: EdgeInsets.only(bottom: 15),
+              //     decoration: BoxDecoration(
+              //         color: Color(0xffB7FFE1),
+              //         borderRadius: BorderRadius.circular(10)),
+              //     child: Container(
+              //         margin:
+              //         EdgeInsets.only(left: 20, top: 20, right: 15, bottom: 56),
+              //         child: Row(
+              //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //           children: [
+              //             Text(
+              //               'Жалобы и предложения',
+              //               style: GoogleFonts.poppins(
+              //                   fontSize: 16,
+              //                   fontWeight: FontWeight.w600,
+              //                   color: Color(0xff1C2340)),
+              //             ),
+              //             Icon(
+              //               Icons.arrow_forward_ios,
+              //               color: Color(0xff100C27),
+              //             ),
+              //           ],
+              //         )),
+              //   ),
+              // ),
             ],
           ),
         ),
